@@ -2,7 +2,7 @@ name: Autofix
 
 on:
   schedule:
-  - cron: '0 12 * * *'
+  - cron: '*/2 * * * *'
 
 jobs:
   build:
@@ -13,8 +13,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Configure Git
       run: |
-        git config --global user.name "rustbot"
-        git config --global user.email "rustbot@users.noreply.github.com"
-    - run: cargo run -p autofix
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        git config --global user.name "staceb"
+        git config --global user.email "staceb@users.noreply.github.com"
+    - run: echo ${{ github.repository }}
+
+
