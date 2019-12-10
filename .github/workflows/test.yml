@@ -9,5 +9,6 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Check repo value
-    - run: echo ${{ github.repository }}
+      - uses: actions/checkout@v1
+      - name: Check repo value
+      - run: echo ${{ github.repository }}
