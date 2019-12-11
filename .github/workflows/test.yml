@@ -1,8 +1,7 @@
 name: Test Fork
 
 on:
-  schedule:
-  - cron: '*/2 * * * *'
+  push:
 
 jobs:
   build:
